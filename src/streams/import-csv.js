@@ -17,7 +17,7 @@ async function runCsvImport() {
   for await (const line of lineParse) {
     const [title, description] = line;
 
-    await fetch("http://localhost:3333", {
+    await fetch("http://localhost:3333/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
